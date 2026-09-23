@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: ./reference/backend
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_PATH: /app/models/sentiment.pkl
+      METADATA_PATH: /app/models/metadata.json
+      ALLOWED_ORIGINS: "*"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  web:
+    build:
+      context: ./reference/web
+    ports:
+      - "8501:8501"
+    environment:
+      API_BASE_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy

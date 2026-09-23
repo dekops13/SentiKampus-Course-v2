@@ -1,0 +1,11 @@
+{
+  "model_name": "sentikampus-tfidf-logistic-regression",
+  "model_version": "starter-p3",
+  "training_samples": 36,
+  "labels": [
+    "negatif",
+    "netral",
+    "positif"
+  ],
+  "purpose": "Model demonstrasi pembelajaran SentiKampus"
+}

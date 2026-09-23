@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.env
+.DS_Store
+Thumbs.db
+reference/backend/models/*.pkl
+reference/backend/models/*.json

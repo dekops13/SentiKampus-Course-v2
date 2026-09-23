@@ -1,0 +1,9 @@
+# P5 — lengkapi Dockerfile ini.
+# Petunjuk komponen yang perlu ada:
+# - base image Python 3.10
+# - WORKDIR
+# - COPY requirements.txt
+# - pip install
+# - COPY source
+# - EXPOSE 8000
+# - CMD uvicorn
